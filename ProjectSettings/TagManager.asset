@@ -3,7 +3,15 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - deposit
+  - withdrawal
+  - Remittance
+  - loan
+  - Deposit
+  - Withdrawal
+  - remittance
+  - Loan
   layers:
   - Default
   - TransparentFX

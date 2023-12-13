@@ -10,13 +10,11 @@ public class ButtonScript : MonoBehaviour
 
     public void OnDeposit()
     {
-        Debug.Log("started deposit");
         onDeposit?.Invoke();
     }
 
     public void OnWithdrawal()
     {
-        Debug.Log("started Withdrawal");
         onWithdrawal?.Invoke();
     }
 }
