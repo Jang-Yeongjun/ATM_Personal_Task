@@ -58,6 +58,6 @@ public class ScreenChanger : MonoBehaviour
         _secondText.fontSize = fontSize;
         _thirdText.fontSize = fontSize;
         _fourthText.fontSize = fontSize;
-        _button.tag = "Bank";
+        _button.tag = "bank";
     }
 }
