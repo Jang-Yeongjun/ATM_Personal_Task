@@ -9,11 +9,15 @@ public class ProcessData : MonoBehaviour
 {
     public TextMeshProUGUI _cashText;
     public TextMeshProUGUI _balanceText;
+    public TextMeshProUGUI _nameText;
+    public TextMeshProUGUI _cardnumberText;
 
     public void Start()
     {
         DataManager.instance.LoadData();
         Refresh();
+        _nameText.text = "Name : " + DataManager.instance.user.name;
+        _cardnumberText.text = DataManager.instance.user.cardnumber;
         DataManager.instance.SaveData();
     }
     public string GetThousandCommaText(int data) 

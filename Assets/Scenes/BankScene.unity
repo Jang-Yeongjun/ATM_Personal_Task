@@ -441,6 +441,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _cashText: {fileID: 152651712}
   _balanceText: {fileID: 262161007}
+  _nameText: {fileID: 1959278796}
+  _cardnumberText: {fileID: 676555847}
 --- !u!1 &142047903
 GameObject:
   m_ObjectHideFlags: 0
@@ -1593,7 +1595,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   user:
-    id: sparta
+    cardnumber: 1234 6518 5455 4861
     password: codingclub
     name: 
     cash: 0
@@ -1672,7 +1674,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 1273 6518 5455 4861
+  m_text: 0000 0000 0000 0000
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ac4d666c837370d49a095f4815df195a, type: 2}
   m_sharedMaterial: {fileID: -4110780594951966008, guid: ac4d666c837370d49a095f4815df195a, type: 2}
@@ -3835,7 +3837,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Name: Rtan'
+  m_text: 'Name :'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ac4d666c837370d49a095f4815df195a, type: 2}
   m_sharedMaterial: {fileID: -4110780594951966008, guid: ac4d666c837370d49a095f4815df195a, type: 2}

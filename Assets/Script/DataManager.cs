@@ -6,8 +6,8 @@ using System.IO;
 [System.Serializable]
 public class Data
 {
-    public string id = "sparta";
-    public string password = "codingclub";
+    public string cardnumber = "6823 6518 5455 4861";
+    public string password = "1234";
     public string name = "Rtan";
     public int cash = 100000;
     public int balance = 50000;
