@@ -4,11 +4,15 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Remittance
-  - Deposit
-  - Withdrawal
-  - Loan
-  - Bank
+  - deposit
+  - loan
+  - withdrawal
+  - remittance
+  - First
+  - Second
+  - Third
+  - Fourth
+  - bank
   layers:
   - Default
   - TransparentFX
