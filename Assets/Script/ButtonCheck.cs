@@ -5,37 +5,35 @@ using UnityEngine;
 
 public class ButtonCheck : MonoBehaviour
 {
-    ButtonScript buttonScript;
+    public delegate void DepositAction(int buttonValue);
+    public static event DepositAction onClick;
 
-    private void Start()
+    public class Constants
     {
-        buttonScript = GetComponent<ButtonScript>();
+        public const int RemittanceValue = 10000;
+        public const int DepositValue = 50000;
+        public const int LoanValue = 100000;
+        public const int WithdrawalValue = 0;
     }
-    public void OnClick()
+    public void SendValue()
     {
-        if(gameObject.CompareTag("Deposit") )
+        int buttonValue = 0;
+
+        switch (gameObject.tag)
         {
-            buttonScript.OnDeposit();
+            case "First":
+                buttonValue = Constants.RemittanceValue;
+                break;
+            case "Second":
+                buttonValue = Constants.DepositValue;
+                break;
+            case "Third":
+                buttonValue = Constants.LoanValue;
+                break;
+            case "Fourth":
+                buttonValue = Constants.WithdrawalValue;
+                break;
         }
-        else if(gameObject.CompareTag("Withdrawal"))
-        {
-            buttonScript.OnWithdrawal();
-        }
-        else if (gameObject.CompareTag("Remittance"))
-        {
-            Debug.Log("Remittancing");
-        }
-        else if (gameObject.CompareTag("Loan"))
-        {
-            Debug.Log("Loanning");
-        }
-        else if (gameObject.CompareTag("deposit"))
-        {
-            Debug.Log("deposit code");
-        }
-        else if (gameObject.CompareTag("withdrawal"))
-        {
-            Debug.Log("withdrawal Code");
-        }
+        onClick?.Invoke(buttonValue);
     }
 }

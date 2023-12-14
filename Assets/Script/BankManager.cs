@@ -4,31 +4,23 @@ using UnityEngine;
 
 public class BankManager : MonoBehaviour
 {
-    TextChanger textChanger;
+    ScreenChanger screenChanger;
     private void Start()
     {
-        textChanger = GetComponent<TextChanger>();
+        screenChanger = GetComponent<ScreenChanger>();
     }
     private void OnEnable()
     {
-        ButtonScript.onDeposit += HandleDepositClick;
-        ButtonScript.onWithdrawal += HandleWithdrawalClick;
+        ButtonCheck.onClick += HandleClick;
     }
 
     private void OnDisable()
     {
-        ButtonScript.onDeposit -= HandleDepositClick;
-        ButtonScript.onWithdrawal -= HandleWithdrawalClick;
+        ButtonCheck.onClick -= HandleClick;
     }
 
-    private void HandleDepositClick()
+    private void HandleClick(int buttonValue)
     {
-        textChanger.ChangeDepositText();
+        screenChanger.ChangeButtonScript(buttonValue);
     }
-
-    private void HandleWithdrawalClick()
-    {
-        textChanger.ChangeWithdrawalText();
-    }
-
 }
