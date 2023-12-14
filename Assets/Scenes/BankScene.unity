@@ -371,6 +371,7 @@ GameObject:
   - component: {fileID: 25037136}
   - component: {fileID: 25037135}
   - component: {fileID: 25037138}
+  - component: {fileID: 25037139}
   m_Layer: 0
   m_Name: Bank Manager
   m_TagString: Untagged
@@ -423,6 +424,20 @@ MonoBehaviour:
   _fourthText: {fileID: 1483329886}
   _button: {fileID: 142047903}
   fontSize: 36
+--- !u!114 &25037139
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 25037134}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31b5c179ad665a949a0300d15dc74536, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _cashText: {fileID: 152651712}
+  _balanceText: {fileID: 262161007}
 --- !u!1 &142047903
 GameObject:
   m_ObjectHideFlags: 0
@@ -720,7 +735,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Cash : 100,000'
+  m_text: 'Cash :'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ac4d666c837370d49a095f4815df195a, type: 2}
   m_sharedMaterial: {fileID: -4110780594951966008, guid: ac4d666c837370d49a095f4815df195a, type: 2}
@@ -1073,7 +1088,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Balance : 50,000'
+  m_text: 'Balance :'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ac4d666c837370d49a095f4815df195a, type: 2}
   m_sharedMaterial: {fileID: -4110780594951966008, guid: ac4d666c837370d49a095f4815df195a, type: 2}
@@ -1362,11 +1377,11 @@ Transform:
   m_GameObject: {fileID: 458144729}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.5, z: 0}
-  m_LocalScale: {x: 1.175, y: 11.4, z: 1}
+  m_LocalPosition: {x: -193, y: -146, z: 0}
+  m_LocalScale: {x: 4.7, y: 5.7, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1008871065}
+  m_Father: {fileID: 1029288043}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &519420028
 GameObject:
@@ -1544,6 +1559,58 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &616472355
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 616472357}
+  - component: {fileID: 616472356}
+  m_Layer: 0
+  m_Name: DataManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &616472356
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 616472355}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a57854247d99be740a1647bca8ecd44e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  user:
+    id: sparta
+    password: codingclub
+    name: 
+    cash: 0
+    balance: 0
+    debt: 0
+    interest: 0
+--- !u!4 &616472357
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 616472355}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.1438951, y: -2.3846836, z: -0.5716469}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &676555845
 GameObject:
   m_ObjectHideFlags: 0
@@ -1967,7 +2034,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 262161006}
-  - {fileID: 458144731}
   m_Father: {fileID: 1029288043}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1008871066
@@ -2116,6 +2182,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 458144731}
   - {fileID: 1043050761}
   - {fileID: 219915049}
   - {fileID: 1008871065}
@@ -4161,3 +4228,4 @@ SceneRoots:
   - {fileID: 142047907}
   - {fileID: 1029288043}
   - {fileID: 25037136}
+  - {fileID: 616472357}

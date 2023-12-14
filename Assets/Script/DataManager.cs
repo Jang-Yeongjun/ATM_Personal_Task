@@ -8,9 +8,9 @@ public class Data
 {
     public string id = "sparta";
     public string password = "codingclub";
-    public string name;
-    public int cash;
-    public int balance;
+    public string name = "Rtan";
+    public int cash = 100000;
+    public int balance = 50000;
     public int debt = 0;
     public int interest = 0;
 }
@@ -19,7 +19,7 @@ public class DataManager : MonoBehaviour
     string path;
     string filename = "userdata";
     public static DataManager instance;
-    Data user = new Data();
+    public Data user = new Data();
     private void Awake()
     {
         if(instance == null)
@@ -34,10 +34,6 @@ public class DataManager : MonoBehaviour
     }
     public void Start()
     {
-        user.name = "Rtan";
-        user.cash = 100000;
-        user.balance = 50000;
-
         SaveData();
     }
     public void SaveData()

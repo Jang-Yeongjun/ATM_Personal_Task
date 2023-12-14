@@ -13,6 +13,11 @@ public class ScreenChanger : MonoBehaviour
     public TextMeshProUGUI _fourthText;
     public GameObject _button;
     public float fontSize = 36f;
+    ProcessData processData;
+    private void Start()
+    {
+        processData = GetComponent<ProcessData>(); // 이 부분 추가
+    }
     public void ChangeButtonScript(int buttonValue)
     {
         if (_button.CompareTag("bank"))
@@ -35,6 +40,14 @@ public class ScreenChanger : MonoBehaviour
                 _button.tag = "withdrawal";
             }
         }
+        else if(_button.CompareTag("deposit"))
+        {
+            processData.DepositProcess(buttonValue);
+        }
+        else if (_button.CompareTag("withdrawal"))
+        {
+            processData.WithdrawalProcess(buttonValue);
+        }
     }
     public void ButtonText()
     {
@@ -51,7 +64,7 @@ public class ScreenChanger : MonoBehaviour
     public void BankMainScreen()
     {
         _firstText.text = "송금";
-        _secondText.text = "예금";
+        _secondText.text = "입금";
         _thirdText.text = "대출";
         _fourthText.text = "출금";
         _firstText.fontSize = fontSize;
